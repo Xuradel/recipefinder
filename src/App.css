@@ -1,38 +1,103 @@
-.App {
-  text-align: center;
+@font-face {
+  font-family: "cookieR";
+  src: url("./fonts/Cookie-Regular.ttf");
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@font-face {
+  font-family: "groteskBold";
+  src: url("./fonts/HKGrotesk-Bold.otf");
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@font-face {
+  font-family: "groteskLight";
+  src: url("./fonts/HKGrotesk-LightLegacy.otf");
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
+*{margin:0;padding:0;  background-color: #ffffff;}
+.main-container{
+}
+.grid{
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  row-gap: 2rem;
+  column-gap: 2rem;
+}
+.item-container{
+  box-shadow: 0px 3px 13px -5px rgba(0, 0, 0, 0.54);
+  -webkit-box-shadow: 0px 3px 13px -5px rgba(0,0,0,0.54);
+  -moz-box-shadow: 0px 3px 13px -5px rgba(0,0,0,0.54);  display: flex;
   flex-direction: column;
   align-items: center;
+  gap:1rem;
+  padding: .5rem;
+  width: 70%;
+}
+
+.item-container h1{
+  text-align: center;
+  width: 80%;
+  font-family: "groteskBold";
+  font-size: 1.5rem;
+}
+.item-container h2{
+  font-family: "groteskBold";
+  font-size: 1.5rem;
+}
+.item-container h3{
+  font-family: "groteskBold";
+  font-size: 1.5rem;
+}
+.item-container p{
+  font-family: "groteskLight";
+  width: 80%;
+}
+.search-box{
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+
+}
+::placeholder{color: rgb(1, 0, 0);}
+.search-box input{
+  padding: .7rem 1.5rem;
+  font-size: .8rem;
+  border-radius: 25px;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  background: rgba(255,255,255,0.1);
+  color: rgb(3, 3, 3);
+}
+.search-box button{
+  border: none;
 }
 
-.App-link {
-  color: #61dafb;
+.banner{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.banner img{
+  max-width: 80%;
+  height: auto;
+  border: solid 5px green;
+}
+.logo{
+  width: 25%;
+  height: auto;
+  max-width: 20rem;
+}
+.find{
+  width: 40px;
+  transition: all .4s;
+}
+.find:hover{
+  width: 55px;
+}
+.item-image{
+  width: 50%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+
+@media only screen and (min-width: 768px) {
+  .search-box input{
+    font-size: 1.2rem;
   }
 }
+  
